@@ -1,0 +1,25 @@
+/// Basic Maths.....
+count digits of evenly spaced number
+
+
+// User function Template for Java
+
+class Solution 
+{
+    static int evenlyDivides(int n) 
+    {
+        // code here
+        int c=0;
+        int t=n;
+        while(t>0)
+        {
+            int l=t%10;
+            if(l!=0 && n%l==0)
+            {
+                c++;
+            }
+            t/=10;
+        }
+        return c;
+    }
+}
