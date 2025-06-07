@@ -6,7 +6,7 @@ count digits of evenly spaced number
 
 class Solution 
 {
-    static int evenlyDivides(int n) 
+    static int evenlyDivides(int n)
     {
         // code here
         int c=0;
