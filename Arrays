@@ -1,1 +1,59 @@
+///Intersection
+public static ArrayList<Integer> Intersection(int arr1[], int arr2[], int n, int m) 
+	{
+		   int i = 0, j = 0; // pointers
+		  ArrayList<Integer > Union=new ArrayList<>(); // Uninon vector
+		  while (i < n && j < m)
+		  {
+			  if(arr1[i]<arr2[j])
+			  {
+				  i++;
+			  }
+			  else if(arr1[i]>arr2[j])
+			  {
+				  j++;
+			  }
+			  else {
+				  Union.add(arr1[i]);
+				  i++;j++;
+			  }
+			  
+			  
+		  }
+		  return Union;
+		    
+	}
+///
+Missing number using xor
+public static int missingNumber(int []a, int N) 
+	 {
 
+	        int xor1=0;
+	        int xor2=0;
+	        for(int i=0;i<N-1;i++)
+	        {
+	        	xor1^=a[i];
+	        	xor2^=i+1;
+	        	
+	        }
+	        xor2^=N;
+	        return xor1^xor2;
+	        
+	        
+	        
+	 }
+///// maximum ones in consecutive place 
+public  static int findMaxConsecutiveOnes(int nums[]) {
+	        int cnt = 0;
+	        int maxi = 0;
+	        for (int i = 0; i < nums.length; i++) {
+	            if (nums[i] == 1) {
+	                cnt++;
+	            } else {
+	                cnt = 0;
+	            }
+
+	            maxi = Math.max(maxi, cnt);
+	        }
+	        return maxi;
+	    }
